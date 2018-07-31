@@ -1,0 +1,821 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* GLOBAL STYLES */
+
+/* font-family: 'Raleway', sans-serif;
+font-family: 'Lora', serif; */
+
+p {
+    color: #666666;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 85%;
+    /* border: 1px solid red; */
+}
+
+h2.header2 {
+    text-transform: uppercase;
+    /* border: 1px solid red; */
+    margin-bottom: 50px;
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.header2::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    max-width: 60px;
+    border-bottom: 2.5px solid #64a604;
+}
+
+/* HOME PAGE STYLES */
+
+/* HEADER */
+
+#indexHeader {
+    height: 100vh;
+    width: 100%;
+    background-image: url('../assets/home-1.jpeg');
+    background-position: center;
+    position: relative;
+}
+
+#indexHeader nav {
+    position: absolute;
+    width: 100%;
+}
+
+
+ h1 {
+    float: left;
+    padding-left: 25px;
+    text-transform: uppercase;
+    line-height: 12px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    font-size: 3rem;
+}
+
+nav ul {
+    list-style: none;
+    float: right;
+}
+
+nav ul li {
+    margin-top: 15px;
+    float: left;
+}
+
+li a {
+    /* line-height: 25px; */
+    padding: 10px 12px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+li a:hover {
+    background-color: #64a604;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.navSelected {
+    color: #64a604;
+}
+
+nav i {
+    float: right;
+    font-size: 2rem;
+    padding: 10px 12px;
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+nav i:hover {
+    color: #606060;
+}
+
+#shoppingBag {
+    position: relative;
+}
+
+#searchButton {
+    margin-right: 25px;
+}
+
+/* #shoppingBag:hover #shoppingBagNumber {
+    background-color: grey;
+} */
+
+#shoppingBagNumber {
+    position: absolute;
+    bottom: 0px;
+    right: 5px;
+    font-size: 12px;
+    width: 19px;
+    padding: 3px 0;
+    /* height: 25px; */
+    border-radius: 50%;
+    background-color: #64a604;
+    color: white;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* MOST POPULAR RECIPES */
+
+.popRecipesQuarter {
+    width: 50%;
+    height: 500px;
+    float: left;
+}
+
+.popRecipesQuarter img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+#mostPopularRecipes {
+    max-width: 500px;
+    width: 85%;
+    margin: 0 auto;
+    transform: translateY(50%);
+    text-align: center;
+}
+
+#mostPopularRecipes p{
+    font-family: 'Lora', serif;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+#mostPopularRecipes h2 {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5rem;   
+}
+
+#mostPopularRecipes button {
+    margin-top: 15px;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+#mostPopularRecipes button:hover {
+    background-color: grey;
+}
+
+#mostPopularRecipes h2 {
+    font-size: 2rem;
+}
+
+.popularRecipeListItem {
+    position: relative;
+}
+
+.popularRecipeListItem i {
+    position: absolute;
+    left: -50px;
+    font-size: 25px;
+}
+
+#popularRecipesList {
+    position: relative;
+}
+
+#popularRecipesList ul {
+    position: absolute;
+    top: calc(50% - 75px);
+    transform: translateY(-50%);
+}
+
+.popularRecipeListItem h3{
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 1.5rem;
+    margin-bottom: -5px;
+}
+
+.popularRecipeListItem p {
+    font-family: 'Lora', serif;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+/* CHECK */
+#mostPopularRecipes h2:after {
+    border-bottom: 3px solid #64a604;
+    width: 200px;
+}
+
+#mostPopularRecipes button {
+    padding: 15px 25px;
+    border: none;
+    background-color: #64a604;
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* POPULAR RECIPE LIST */
+
+#popularRecipesList {
+    /* width: 85%; */
+    margin: 0 auto;
+    height: 500px;
+    padding: 20px;
+    /* border: 1px solid red; */
+    background-color: #efefef;
+    /* transform: translateY(55%); */
+}
+
+#popularRecipesList ul li {
+    float: left;
+    width: 50%;
+    list-style: none;
+    padding-left: 80px;
+    font-size: 12px;
+    transform: translate(-30px, 50%);
+    /* transform: translateX(-30px); */
+}
+
+/* SECTION OUR RESTAURANTS */
+
+#sectionOurRestaurants {
+    /* height: 670px; */
+    clear: both;
+    padding: 250px 0 125px 0;
+    text-align: center;
+}
+
+#sectionOurRestaurants p {
+    font-family: 'Lora', serif;
+    font-size: 1.5rem;
+}
+
+#sectionOurRestaurants h2 {
+    margin-top: 50px;
+}
+
+#ourRestaurantsImages {
+    position: relative;
+    width: 500px;
+    margin: 0 auto;
+}
+
+#homeFour {
+    width: 100%;
+    object-fit: cover;
+}
+
+
+#homeCircle {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    right: -60px;
+    top: -60px;
+}
+
+/* SECTION GALLERY */
+
+.galleryImages {
+    float: left;
+    width: calc(100% / 3);
+}
+
+/* HUNGRY CLIENTS */
+
+#sectionHungryClients {
+    clear: both;
+    padding: 125px;
+    background-color: #dded9a;
+    text-align: center;
+}
+
+#sectionHungryClients p {
+    font-family: 'Lora', serif;
+    font-size: 1.5rem;
+}
+
+#hungryClientContainer {
+    position: relative;
+}
+
+#hungryClientContainer:after {
+    content: '”';
+    position: absolute;
+    font-size: 100px;
+    right: -50px;
+    top: calc(50% + 20px);
+    color: white;
+}
+
+#hungryClientContainer:before {
+    content: '“';
+    position: absolute;
+    font-size: 100px;
+    left: -50px;
+    top: calc(50% - 20px);
+    color: white;
+}
+
+.hungryArrow {
+    margin: 0 15px;
+    margin-top: 75px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.hungryArrow:hover {
+    color: grey;
+}
+
+/* FOOTER */
+.footerText {
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    color: #666666;
+}
+
+#polar {
+    color: #64a604;
+}
+
+/* sneaky sneaky */
+#orangeDot {
+    color: #cc9900;
+}
+
+#footerHeader {
+    text-transform: uppercase;
+    color: #64a604;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+.footerH3 {
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
+}
+
+#footerInput {
+    border: none;
+    background-color: #535353;
+    color: #666666;
+    padding: 10px;
+    font-family: 'Lora', serif;
+}
+
+#footerButton {
+    background-color: #64a604;
+    border: none;
+    height: 33px;
+    position: absolute;
+    padding: 0 10px;
+    color: white;
+}
+
+#footerButton:hover {
+    background-color: white;
+    color: #64a604;
+}
+
+#footerTop {
+    background-color: #2e2e2e;
+    padding: 75px 0;
+}
+
+.footerThird {
+    width: calc(100% / 3);
+    float: left;
+    padding: 0 25px;
+}
+
+.footerText {
+    color: #8b8b8b;
+    border-bottom: 0.25px solid #8b8b8b;
+    padding-bottom: 15px;
+}
+/* FOOTER BOTTOM */
+
+#footerBot {
+    background-color: #252525;
+    /* color: #8b8b8b; */
+    padding: 5px 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+#footerBot p {
+    color: #8b8b8b;
+}
+
+* .footerText:last-of-type {
+    border-bottom: none;
+}
+
+
+
+/* BLOG PAGE STYLES */
+
+#blog {
+    background-image: url('../assets/blog-1.jpeg');
+    height: 400px;
+}
+
+#blogRecipe {
+    padding: 100px 0 25px 0;
+}
+
+#blogRecipe h2 {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 3rem;
+    margin-bottom: -10px;
+}
+
+#blogRecipe h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    margin-bottom: 35px;
+}
+
+.recipeText {
+    font-family: 'Lora', serif;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+#blogSocial .wrapper {
+    padding: 20px 0;
+    margin-bottom: 25px;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+#blogSocial p {
+    font-family: 'Lora', serif; 
+    font-size: 1.2rem;
+    /* margin-bottom: 50px; */
+}
+
+#blogShare * {
+    float: left;
+}
+
+#blogShare i {
+    font-size: 1.5rem;
+    margin-left: 15px;
+    line-height: 3.5rem;
+    color: #666666;
+    cursor: pointer;
+}
+
+#blogShare i:hover {
+    color: #64a604;
+}
+
+#blogSocial p span{
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.2rem;  
+    color: #000; 
+}
+
+#blogAuthorAbout h2 {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+#blogAuthorAbout p {
+    font-family: 'Lora', serif;
+    font-size: 1.2rem;
+    line-height: 3rem;
+}
+
+#blogPosts .wrapper{
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+#blogPosts h2{
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-top: 40px;
+    border-top: 1px solid #efefef;
+    padding-top: 25px;
+}
+
+#blogAuthor img {
+    width: 150px;
+    float: left;
+}
+
+#blogAuthorAbout {
+    width: calc(100% - 175px);
+    float: left;
+    padding: 25px;
+    margin-left: 25px;
+    background-color: #e5e5e5;
+}
+
+.postsContainer {
+    width: calc(100%/3);
+    float: left;
+}
+
+
+.postsContainer img {
+    padding: 10px;
+    width: 100%;
+}
+
+.postsContainer h3 {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-bottom: 0px;
+    padding: 0 10px;
+}
+
+.postsContainer p {
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    padding: 0 10px;
+}
+
+.postsContainer p span {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    color: black;
+    font-size: 1rem;
+}
+
+#blogCommentHeader {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 2em;
+}
+
+.blogCommentContainer img {
+    width: 100px;
+    float: left;
+    padding: 0px 10px 10px 10px;
+}
+
+.blogTextContainer {
+    margin-bottom: 25px;
+    padding: 15px;
+    margin-left: 25px;
+    float: left;
+    width: calc(100% - 125px);
+    background-color: #efefef;
+    position: relative;
+}
+
+.blogTextContainer p {
+    font-family: 'Lora', serif;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+.blogTextContainer p:last-child {
+    color: black;
+}
+
+.blogTextContainer h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 0px;
+}
+
+.blogTextContainer h3 span {
+    font-family: 'Lora', serif;
+    font-weight: 100;
+    color: black;
+}
+
+.blogCommentArrow {
+    position: absolute;
+    left: -16px;
+    top: 20px;
+    width: 0;
+    border-right: 16px solid #efefef;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: none;
+}
+
+#BlogLeaveComment {
+    padding-bottom: 100px;
+}
+
+#BlogLeaveComment h2{
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+#BlogLeaveComment p {
+    font-family: 'Lora', serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+#BlogLeaveComment input {
+    width: calc((100% / 3) - (50px /3));
+    padding: 10px;
+    margin-right: 25px;
+    float: left;
+    margin-bottom: 25px;
+    border: 1px solid lightgrey;
+    font-family: 'Lora', serif;
+    color: #e5e5e5;
+}
+
+#BlogLeaveComment input:nth-child(3) {
+    margin-right: 0px;
+}
+
+#BlogLeaveComment textarea {
+    padding: 10px;
+    width: 100%;
+    float: left;
+    border: 1px solid lightgrey;
+    font-family: 'Lora', serif;
+}
+
+#BlogLeaveComment button {
+    text-transform: uppercase;
+    background-color: #64a604;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    clear: both;
+    margin-top: 25px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
+}
+
+
+/* CONTACT PAGE STYLES */
+
+#contactHeader {
+    height: 500px;
+    background-image: url('../assets/contact-1.jpeg');
+}
+
+#imageSplash img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: -10px;
+    z-index: 100;
+}
+
+#contactLeft {
+    float: left;
+    width: 60%;
+    padding: 20px;
+    color: #666666;
+    font-size: 10px;
+    padding-left: 12.5%;
+    /* max-width: calc(800px * 0.6); */
+}
+
+#contactLeft h2 {
+    color: #333333;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.contactInput:nth-child(1) {
+    margin-right: 20px;
+}
+
+.contactInput {
+    width: calc(50% - 10px);
+    float: left;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: #f6f6f6;
+    font-family: 'Lora', serif;
+    color: #666666;
+}
+
+#contactLeft textarea {
+    width: 100%;
+    background-color: #f6f6f6;
+    border: none;
+    padding: 10px;
+    font-family: 'Lora', serif;
+}
+
+#contactLeft button {
+    color: #64a604;
+    text-transform: uppercase;
+    border: none;
+    margin-top: 20px;
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+    transition: 0.6s all;
+}
+
+#contactLeft button:after {
+    content: '⟶';
+    position: absolute;
+    line-height: 1rem;
+    right: -10px;
+}
+
+#contactLeft button:hover {
+    color: grey;
+    margin-left: 25px;
+}
+
+.contactInput:nth-child(3) {
+    width: 100%;
+}
+
+#contactRight {
+    float: left;
+    width: 40%;
+    padding: 20px;
+    background-color: #f6f6f6;
+    height: 100%;
+    position: relative;
+    padding-right: 12.5%;
+    /* max-width: calc(800px * 0.4); */
+}
+
+
+#contactRight h2{
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#contactRight h3{
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5rem;;
+    margin: 20px 0;
+}
+
+#contactRight p {
+    font-family: 'Lora', serif;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+#contactRight p span {
+    color: black;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+.beetroot {
+    line-height: 20px;
+}
